@@ -12,10 +12,10 @@ from datetime import datetime
 
 # Configurações
 AD             = "gabm:SA-SAOPAULO-1-AD-1"
-COMPARTMENT_ID = "ocid1.tenancy.oc1..aaaaaaaalysxw323jmagtrmmy74xxpy4ax4bgvxfhwbymrlhlybupzkh6c7q"
-SUBNET_ID      = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaa5abbhnrups43yrwfjpsfkro4fdrxv57w7jeexlt7r7ivctlvzkoq"
-IMAGE_ID       = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaal2igd4tgw4xlhdk3euqett5c6fvidgutkigumpbnote4ovpgylsq"
-SSH_KEY        = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUKhfygOrmtgxMm04O1IjvNNSZb/x+9oFZ49MYjZS/t7PAcJ3X7/X/p/WV++ZlC5h2vf8Oai2nnmSdyLI3AvrEK4PY82Y5IVOGgUOgn3r2Nd+rYHElamYSVn8x7J/GqjtNFEyszU0enq5h12d39jq2cUZF/YZw9ghf9Sdc/V//VZSsKalnH8Fxri0vmnOkzUWkNoB6jjD6Gm1NPTKJkUcJH1ljJmeExYIz6kGuQRwAlxdX8dcXcGJVIphRovVISMMCdgZgICFz/7IXvPJa0YEQ+MwlnrYb5IHKPqG/Qw0490KZjvMG0VNKsNjhFd9Ox/dzJ262gcHQbI+rb/y0TBZk5x4Z5a1VdMexNe+q3/sjDlMAlqpZigo7BcmtUqnnSZZddId5sjib7DhGBkVZAtnVuzPktsmJLYkeu0mrJQamiZvBUW8gqV6WyMhP4fej4of/GIp4SeeZGzKoDLbwpGxgSmxTCv9iPTrL2vhj+12l6nA5VDfbttKAF2Lhegg+7QvpMeaWXp8CD+m1ujHfcNCLawXsOtf1smgxGxutEXgu/SmcciS97gir6CVY/GXzdknoNVoCsevQKnvd4hrNBljZL8HEny4vUXgf7K12wQqnU4Jdz0KG0pfyaDWQeiVySkK7x3W3v7d61MDHzUTy3gViJKjNDMwWYgbu12WEP3lh9Q== biel_@Gabriel-PC"
+COMPARTMENT_ID = ""
+SUBNET_ID      = ""
+IMAGE_ID       = ""
+SSH_KEY        = "ssh-rsa "
 MAX_RPM        = 3          # máximo de requisições por minuto (único valor empiricamente seguro)
 INTERVAL       = 20         # 20s — ótimo matematicamente: 4320 tentativas/dia sem nenhuma pausa de 429
 LOG_FILE       = "/app/retry.log"
@@ -37,7 +37,7 @@ def send_email(subject, html):
             headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
             json={
                 "from": "BotChat Geek <onboarding@resend.dev>",
-                "to": ["gabriel.lcalbuquerque@gmail.com"],
+                "to": [""],
                 "subject": subject,
                 "html": html
             },
