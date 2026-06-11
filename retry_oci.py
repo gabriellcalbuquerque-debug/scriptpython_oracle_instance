@@ -11,7 +11,7 @@ import subprocess
 from datetime import datetime
 
 # Configurações
-AD             = "gabm:SA-SAOPAULO-1-AD-1"
+AD             = ""
 COMPARTMENT_ID = ""
 SUBNET_ID      = ""
 IMAGE_ID       = ""
