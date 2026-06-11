@@ -1,0 +1,32 @@
+# ============================================================
+# terraform.tfvars.template
+# Copie para terraform.tfvars e preencha com seus dados
+# O retry.sh usa este arquivo — não renomeie
+# ============================================================
+
+# --- Credenciais OCI (do ~/.oci/config) ---
+tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaalysxw323jmagtrmmy74xxpy4ax4bgvxfhwbymrlhlybupzkh6c7q"
+user_ocid        = "ocid1.user.oc1..aaaaaaaa64j7k4gmlottwryg6jafm6bvgprp2stlqzsjuegr3q5xgpj4hdsq"
+fingerprint      = "ac:c2:20:f1:c8:cd:d0:c9:c6:ac:31:a5:30:72:a9:7c"
+private_key_path = "C:/Users/biel_/.oci/oci_api_key.pem"
+region           = "sa-saopaulo-1"
+
+# --- Rede e Compartimento ---
+compartment_id = "ocid1.tenancy.oc1..aaaaaaaalysxw323jmagtrmmy74xxpy4ax4bgvxfhwbymrlhlybupzkh6c7q"
+subnet_ocid    = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaa5abbhnrups43yrwfjpsfkro4fdrxv57w7jeexlt7r7ivctlvzkoq"
+
+# --- AD (será substituído pelo retry.ps1) ---
+availability_domain = "gabm:SA-SAOPAULO-1-AD-1"
+
+# --- Imagem ARM: Ubuntu 22.04 (SA-SAOPAULO-1) ---
+image_ocid = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaal2igd4tgw4xlhdk3euqett5c6fvidgutkigumpbnote4ovpgylsq"
+
+# --- Instância ---
+instance_name       = "botchat-geek-arm"
+ocpus               = 4
+memory_in_gbs       = 24
+boot_volume_size_gb = 50
+
+# --- SSH ---
+ssh_public_key_path = "C:/Users/biel_/.ssh/id_rsa.pub"
+
